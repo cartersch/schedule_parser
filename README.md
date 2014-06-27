@@ -3,6 +3,16 @@ Schedule Parser
 
 This is a little project I created for taking a text file and turning it into a schedule for a workshop or conference.  The goal is to allow organizers to easily shift names and times around and get an idea of what a schedule may look like before committing to anything and publishing the schedule.
 
+Requirement
+-----------
+
+- PHP 5.4 or higher
+- a modern webbrowser
+
+
+Instructions
+------------
+
 It's best to start with the sample template as it will already have many of the 'Fixtures' for each day of a typical workshop. The file is constructed like so:
 
 - Each day starts with two Hashtags (##) and the word 'Day'

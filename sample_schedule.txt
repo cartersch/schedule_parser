@@ -1,0 +1,100 @@
+## Day One
+# Fixtures **Start time | End Time (optional) | Fixture
+8:00AM |  Shuttle Pick Up to MBI
+8:15AM | 8:45AM | Breakfast
+8:45AM | 9:00AM | Introductions and Information - Marty Golubitsky
+12:00PM | 2:00PM | Lunch
+5:00PM | 6:30PM | Reception and Poster Session
+6:45PM | Shuttle Pick Up to Hotel
+
+# Other Items **Start time | End Time | Other Item
+9:00AM | 9:15AM | Workshop Introduction
+4:30PM | 5:00PM | Discussion
+
+
+# Speakers **Talk Time | Break Time | Break Type (break or discussion) | Last Name
+50 | Speaker Mon 1 | 10 | Discussion | 30 | Break
+60 | Speaker Mon 2 | 0
+60 | Speaker Mon 3 | 15 | Break
+60 | Speaker Mon 4 | 0 | Break
+
+
+
+
+
+
+## Day Two
+# Fixtures **Start time | End Time (optional) | Fixture
+8:00AM |  Shuttle Pick Up to MBI
+8:15AM | 9:00AM | Breakfast
+12:00PM | 2:00PM | Lunch
+5:15PM | Shuttle Pick Up to Hotel
+
+# Other Items **Start time | End Time | Other Item
+4:30PM | 5:00PM | Discussion
+
+# Speakers **Talk Time | Break Time | Break Type (break or discussion) | Last Name
+60 | Speaker Tues 1 | 30 | Break
+60 | Speaker Tues 2 | 0 | Break
+60 | Speaker Tues 3 | 30 | Break
+60 | Speaker Tues 4 | 0 | Break
+
+
+
+
+
+## Day Three
+# Fixtures **Start time | End Time (optional) | Fixture
+8:00AM |  Shuttle Pick Up to MBI
+8:15AM | 9:00AM | Breakfast
+12:00PM | 2:00PM | Lunch
+5:15PM | Shuttle Pick Up to Hotel
+
+# Other Items **Start time | End Time | Other Item
+4:30PM | 5:00PM | Discussion
+
+# Speakers **Talk Time | Break Time | Break Type (break or discussion) | Last Name
+60 | Speaker Wed 1 | 30 | Break
+60 | Speaker Wed 2 | 30 | Break
+60 | Speaker Wed 3 | 30 | Break
+60 | Speaker Wed 4 | 0 | Break
+
+
+
+
+
+## Day Four
+# Fixtures **Start time | End Time (optional) | Fixture
+8:00AM |  Shuttle Pick Up to MBI
+8:15AM | 9:00AM | Breakfast
+12:00PM | 2:00PM | Lunch
+5:15PM | Shuttle Pick Up to Hotel
+6:30PM | 7:00PM | Cash Bar - Crowne Plaza
+7:00PM | 8:30PM | Banquet at Crowne Plaza
+
+# Other Items **Start time | End Time | Other Item
+4:30PM | 5:00PM | Discussion
+
+# Speakers **Talk Time | Break Time | Break Type (break or discussion) | Last Name
+60 | Speaker Thurs 1 | 30 | Break
+60 | Speaker Thurs 2 | 30 | Break
+60 | Speaker Thurs 3 | 30 | Break
+60 | Speaker Thurs 4 | 0
+
+
+
+
+
+
+## Day Five
+# Fixtures **Start time | End Time (optional) | Fixture
+8:00AM |  Shuttle Pick Up to MBI
+8:15AM | 9:00AM | Breakfast
+12:30PM | Shuttle Pick Up to Hotel
+
+# Other Items **Start time | End Time | Other Item
+11:45AM | 12:15PM | Discussion
+
+# Speakers **Talk Time | Break Time | Break Type (break or discussion) | Last Name
+60 | Speaker Fri 1 | 30 | Break
+60 | Speaker Fri 2 | 0 | Break

@@ -1,0 +1,121 @@
+header{
+    text-align: center;
+}
+
+header h2{
+    display: none;
+}
+
+#upload{
+    margin-bottom: 20px;
+}
+
+.sticky{
+    position: fixed;
+    width: 100%;
+    right: 0px;
+    left: 0px;
+    top: -60px;
+}
+
+.spin{
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    font-size: 50px;
+}
+
+.spin.small{
+    width: 25px;
+    height:25px;
+    margin: 5px auto;
+    font-size:25px;
+}
+
+.spin span{
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+.alert{
+    padding: 15px;
+}
+
+table th{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.speaker{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #428bca;
+}
+
+.print-button{
+    display: none;
+}
+
+#how-to{
+  opacity : 0;
+
+/*  transform: scale(1.5);*/
+
+  position: fixed;
+
+  top: 15%;
+  width: 75%;
+  height: 75%;
+  overflow: scroll;
+  left: 50%;
+  margin-left: -35%;
+  padding: 10px;
+  border: 1px solid #333333;
+  background-color: #ffffff;
+
+  pointer-events: none;
+}
+
+#how-to.overlay{
+  opacity : 1;
+  pointer-events: auto;
+}
+
+.has-overlay{
+  -webkit-filter: blur(5px) grayscale(50%);
+}
+
+.overlay, .has-overlay{
+  transition: opacity 0.2s ease-in;
+}
+
+.close-button{
+  display: block;
+  position: fixed;
+  width: 74.8%;
+  padding: 5px 0;
+  margin: -10px -10px 0 -10px;
+  background-color: #888888;
+  color: #ffffff;
+  text-align: right;
+  cursor: pointer;
+}
+
+@media print{
+    header h1{
+        display: none;
+    }
+
+    header h2{
+        display: block;
+    }
+
+    #upload{
+        display:none;
+    }
+}

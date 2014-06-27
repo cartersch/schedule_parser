@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Schedule Parser</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/bootstrap-theme.css" />
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Schedule Parser</h1>
+        <h2>Tentative Schedule</h2>
+    </header>
+    <section id="upload" class="row">
+        <div class="alert alert-info col-md-6 col-md-offset-3">
+        <form id="uploadForm" role="form" method="post" action="parser/parse_file.php" enctype="multipart/form-data">
+            <p class="help-block">If you need a blank template file to work from you can get one <a href="sample_schedule.txt">here</a>.<br/>
+            A detailed outline of how to construct the file is <a class="how-to-button" href="#how-to">here</a>.</p>
+            <div class="form-group">
+                <label for="uploadFile">Select a File</label>
+                <input type="file" id="uploadFile" name="uploadFile" />
+            </div>
+            <button type="submit" class="btn btn-primary">Upload <i class="glyphicon glyphicon-circle-arrow-up"></i></button>
+            <button class="btn btn-primary pull-right print-button">Print <i class="glyphicon glyphicon-print"></i></button>
+            <div class="spin-placeholder"></div>
+        </form>
+        </div>
+    </section>
+    <section id="results">
+
+    </section>
+    </div>
+    <footer role="contentinfo">
+        <div id="how-to">
+            <div class="close-button">(close)</div>
+            <h2>Instructions</h2>
+
+            <p>It&#8217;s best to start with the sample template as it will already have many of the &#8216;Fixtures&#8217; for each day of a typical workshop. The file is constructed like so:</p>
+
+            <ul>
+            <li>Each day starts with two Hashtags (##) and the word Day</li>
+            <li>Each daily schedule consists of three sections that start with one hashtag(#) and a keyword
+            <ul>
+            <li>Fixtures</li>
+            <li>Other</li>
+            <li>Speakers</li>
+            </ul></li>
+            <li><p><strong>Fixtures</strong>  hold the typical items that would happen on a typical day (shuttles, breakfast, lunch, etc).</p>
+
+            <ul>
+            <li>Each fixture item is on a separate line and consists of two to three parts separated by a pipe (|)
+            <ul>
+            <li>start time (HH:MMAA)</li>
+            <li>end time (HH:MMAA) (Optional for shuttle times)</li>
+            <li>Fixture name (breakfast, lunch, etc)</li>
+            </ul></li>
+            <li>Example:
+            <pre>
+            8:00AM |  Shuttle Pick Up to MBI
+            8:15AM | 9:00AM | Breakfast
+            12:00PM | 2:00PM | Lunch
+            5:15PM | Shuttle Pick Up to
+            </pre></li>
+            </ul></li>
+            <li><p><strong>Other</strong> holds items specific to that day which are not fixtures or speakers (discussion, break out session, etc.)</p>
+
+            <ul>
+            <li>Each fixture item is on a separate line and consists of three parts separated by a pipe (|)
+            <ul>
+            <li>start time (HH:MMAA)</li>
+            <li>end time (HH:MMAA) </li>
+            <li>Other Item name (Discussion, Breakout Session, etc)</li>
+            </ul></li>
+            <li>Example:
+            <pre>
+            9:00AM | 9:15AM | Workshop Introduction
+            4:30PM | 5:00PM | Discussion
+            </pre></li>
+            </ul></li>
+            <li><p><strong>Speaker</strong> holds the list of speakers in the order they are to talk for that day.</p>
+
+            <ul>
+            <li>Each speaker item is on a separate line and consists of at least three parts separated by a pipe (|)
+            <ul>
+            <li>Length of Talk</li>
+            <li>The <em>Last Name</em> of the speaker</li>
+            <li>If schedule item(s) is to appear after a talk (discussion, break, etc), use the following format
+            <ul>
+            <li>Length of item</li>
+            <li>Item name (discussion, break, etc)</li>
+            </ul></li>
+            <li>If no scheduled item is to appear after the talk place a zero (0)</li>
+            <li>Example:
+            <pre>
+            50 | Speaker Mon 1 | 10 | Discussion | 30 | Break
+            60 | Speaker Mon 2 | 0
+            60 | Speaker Mon 3 | 15 | Break</pre></li>
+            </ul></li>
+            </ul></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/x-handlebars-template" id="schedule-table">
+    <table class="table table-striped">
+    {{#each scheduleItems}}
+    <tr>
+        <th colspan="2">Day {{getDay}}</th>
+    </tr>
+        {{#each this}}
+        <tr>
+        <td contenteditable = "true">
+            {{formatDate startTime}}
+            {{#displayEndTime showEndTime }}
+               - {{formatDate endTime}}
+            {{/displayEndTime}}
+        </td>
+        <td contenteditable = "true">
+
+        {{#isSpeaker scheduleType }}
+            <span class="speaker">{{scheduleValue}}</span>
+        {{else}}
+            {{scheduleValue}}
+        {{/isSpeaker}}
+        </td>
+        </tr>
+        {{/each}}
+    {{/each}}
+    </table>
+    </script>
+</body>
+</html>
